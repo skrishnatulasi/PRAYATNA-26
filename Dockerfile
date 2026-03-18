@@ -1,3 +1,9 @@
+# Build the image:
+# docker build -t prayatna-site .
+#
+# Run the container:
+# docker run -d -p 8080:80 --name prayatna-test prayatna-site
+#
 # Use a lightweight Nginx image
 FROM nginx:alpine
 
