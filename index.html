@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayatna '26 | Department of Mechanical Engineering</title>
+    <meta name="description"
+        content="Prayatna '26 — The inter-college technical symposium of Mechanical Engineering at PSG College of Technology. March 27 & 28, 2026.">
+    <link rel="stylesheet" href="style.css?v=11">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Dosis:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Canvas for particle background -->
+    <canvas id="particleCanvas"></canvas>
+
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="nav-institution">PSG College of Technology</span>
+                <div class="logo-brand">
+                    <img src="assets/logos/dept_logo.png" alt="PSGCT" class="nav-brand-logo">
+                    <span class="logo-text">PRAYATNA <span class="logo-accent">'26</span></span>
+                </div>
+            </div>
+
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#events">Events</a>
+                <a href="#workshops">Workshops</a>
+                <a href="#contact">Contact</a>
+                <a href="https://forms.gle/5TU1a3JvXQkt9T6z9" target="_blank" class="btn-register-nav"><i
+                        class="fas fa-bolt"></i> Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Spiral rings background -->
+        <div class="spiral-container">
+            <div class="spiral-ring r1"></div>
+            <div class="spiral-ring r2"></div>
+            <div class="spiral-ring r3"></div>
+            <div class="spiral-ring r4"></div>
+            <div class="spiral-ring r5"></div>
+        </div>
+
+        <div class="hero-inner">
+            <p class="hero-pre">PSG COLLEGE OF TECHNOLOGY</p>
+            <p class="hero-pre">DEPARTMENT OF MECHANICAL ENGINEERING</p>
+            <p class="hero-presents">PRESENTS</p>
+
+            <h1 class="hero-title">
+                PRAYATNA<br>
+                <span class="hero-title-accent">'26</span>
+            </h1>
+
+            <p class="hero-tagline">LEARN &bull; IMPACT &bull; INNOVATE</p>
+
+            <div class="hero-date">
+                March <span class="date-accent">27</span>,
+                <span class="date-accent">28</span> 2026
+            </div>
+
+            <div class="hero-actions">
+                <a href="https://forms.gle/5TU1a3JvXQkt9T6z9" target="_blank" class="btn btn-primary"><i
+                        class="fas fa-bolt"></i> Register Now</a>
+                <a href="#events" class="btn btn-ghost"><i class="fas fa-compass"></i> Explore Events</a>
+            </div>
+        </div>
+
+        <!-- Social links -->
+        <div class="hero-socials">
+            <a href="https://www.instagram.com/ame_psgtech?igsh=Z3NxZnhiZGh4YXlj" target="_blank" class="social-icon"
+                aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/ame-psg-tech/" target="_blank" class="social-icon"
+                aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section" id="stats">
+        <div class="dot-grid"></div>
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item fade-in">
+                    <span class="stat-number" data-target="7">0</span>
+                    <span class="stat-plus">+</span>
+                    <p class="stat-label">EVENTS</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item fade-in">
+                    <span class="stat-number" data-target="2">0</span>
+                    <span class="stat-plus">+</span>
+                    <p class="stat-label">WORKSHOPS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section class="calendar-section" id="calendar">
+        <div class="container">
+            <p class="section-eyebrow fade-in">SAVE THE DATE</p>
+            <h2 class="section-title-dark fade-in">MARK YOUR <span class="text-accent">CALENDAR</span></h2>
+            <div class="calendar-strip fade-in">
+                <div class="cal-day">24<sup>TUE</sup></div>
+                <div class="cal-day">25<sup>WED</sup></div>
+                <div class="cal-day">26<sup>THU</sup></div>
+                <div class="cal-day cal-active">27<sup>FRI</sup></div>
+                <div class="cal-day cal-active">28<sup>SAT</sup></div>
+                <div class="cal-day">29<sup>SUN</sup></div>
+                <div class="cal-day">30<sup>MON</sup></div>
+            </div>
+            <p class="calendar-month fade-in">MARCH 2026</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <p class="section-eyebrow fade-in">ABOUT THE EVENT</p>
+            <h2 class="section-title fade-in">WHAT IS <span class="text-accent">PRAYATNA?</span></h2>
+            <div class="about-grid">
+                <div class="about-card fade-in">
+                    <div class="about-card-icon"><i class="fas fa-star"></i></div>
+                    <h3>The Symposium</h3>
+                    <p>Prayatna is an inter-college technical symposium at the Department of Mechanical Engineering, PSG
+                        College of Technology. Spanning two days, it brings together undergraduate students from the
+                        mechanical stream for competitions, workshops, and exhibitions — a dynamic platform to showcase
+                        technical expertise and innovative thinking.</p>
+                </div>
+                <div class="about-card fade-in">
+                    <div class="about-card-icon"><i class="fas fa-eye"></i></div>
+                    <h3>Our Vision</h3>
+                    <p>To become a flagship event inspiring the next generation of engineers to pursue excellence in
+                        manufacturing and mechanical engineering, bridging academic learning and industry practices
+                        while promoting sustainable and innovative solutions.</p>
+                </div>
+                <div class="about-card fade-in">
+                    <div class="about-card-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Our Mission</h3>
+                    <p>To foster innovation, technical proficiency, and collaborative learning among engineering
+                        students by providing a platform to solve real-world problems and connect with industry leaders.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="section" id="schedule">
+        <div class="container">
+            <h2 class="section-title fade-in">PROGRAMME <span class="text-accent">SCHEDULE</span></h2>
+            <div class="schedule-grid fade-in">
+
+                <!-- Day 1 Column -->
+                <div class="schedule-col day-1">
+                    <div class="schedule-header">
+                        <span class="schedule-day">DAY 1 &mdash; FRIDAY</span>
+                        <span class="schedule-date">27.03.2026</span>
+                    </div>
+                    <div class="schedule-body">
+                        <div class="schedule-row">
+                            <div class="schedule-time">9:00 AM &ndash; 1:00 PM</div>
+                            <div class="schedule-events">
+                                <div class="event-item">Thinkspire</div>
+                                <div class="event-item mt-2">Guesstimator</div>
+                                <div class="event-item mt-2">Mechanical Autopsy</div>
+                            </div>
+                        </div>
+                        <div class="schedule-row">
+                            <div class="schedule-time">2:00 &ndash; 5:00 PM</div>
+                            <div class="schedule-events">
+                                <div class="event-item">Brand X</div>
+                                <div class="event-item mt-2">Guesstimator</div>
+                                <div class="event-item mt-2">Link Innova</div>
+                                <div class="event-item mt-2">Mechanical Integrity Workshop</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 2 Column -->
+                <div class="schedule-col day-2">
+                    <div class="schedule-header">
+                        <span class="schedule-day">DAY 2 &mdash; SATURDAY</span>
+                        <span class="schedule-date">28.03.2026</span>
+                    </div>
+                    <div class="schedule-body">
+                        <div class="schedule-row">
+                            <div class="schedule-time">9:30 AM &ndash; 12:30 PM</div>
+                            <div class="schedule-events">
+                                <div class="event-item">Industrial Engineering Workshop</div>
+                                <div class="event-item mt-2">Guesstimator</div>
+                                <div class="event-item mt-2">Inflatopia</div>
+                                <div class="event-item mt-2">Locked In</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="section" id="events">
+        <div class="container">
+            <p class="section-eyebrow fade-in">FEATURED</p>
+            <h2 class="section-title fade-in">EVENTS <span class="text-accent">2026</span></h2>
+            <div class="bento-grid">
+                <!-- 1. Thinkspire -->
+                <div class="bento-card bento-large fade-in" style="--card-color: #0ef;">
+                    <div class="bento-icon"><i class="fas fa-lightbulb"></i></div>
+                    <div class="bento-tag">EVENT</div>
+                    <h3 class="bento-title">THINKSPIRE '26</h3>
+                    <p class="bento-desc">THINKSPIRE ’26 is an innovation idea presentation event that provides a
+                        platform for students to showcase their creative and technical skills by presenting innovative
+                        solutions to real-world problems. Got an innovative project or idea worth showcasing? This event
+                        provides a platform for students to present their recent projects, research, or innovative
+                        concepts. Participants will submit an abstract of their work, and shortlisted teams will present
+                        their projects before a panel of judges to compete for the best innovation award.</p>
+                    <div class="bento-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> D block 1st floor conference hall</span>
+                        <span><i class="fas fa-user"></i> Marimuthu - +91 74181 78500</span>
+                        <span><i class="fas fa-user"></i> Jabez - +91 8148 662304</span>
+                    </div>
+                    <div class="bento-actions">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9LUcozK_3_tbmWur63ehGKuB2ngN_b1oKG_cEmaTfHTADYQ/viewform"
+                            target="_blank" class="bento-btn">Register <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <template id="thinkinspire-long">
+                        Showcase your creativity, technical knowledge, and innovative thinking in this exciting project
+                        presentation event. This event provides students with the opportunity to present their latest
+                        projects, research ideas, or technological innovations while competing with other bright
+                        minds.<br><br>Participants are required to submit an abstract of their project prior to the
+                        event. If the number of submissions exceeds the available slots, a screening process will be
+                        conducted based on the abstracts received.<br>Shortlisted participants will be invited to
+                        present their projects during the event in front of a panel of judges.<br><br>During the
+                        presentation, participants should clearly explain:<br>&bull; The problem statement and
+                        motivation behind the project<br>&bull; The methodology or approach used to develop the
+                        solution<br>&bull; Key innovations or unique aspects of the project<br>&bull; Applications and
+                        potential real-world impact<br><br>Presentations will be evaluated based on innovation,
+                        technical depth, feasibility, clarity of presentation, and overall impact.<br><br>This event
+                        aims to encourage students to think creatively, develop practical solutions, and share knowledge
+                        with the academic community. 🏆 The most innovative and well-presented projects will be awarded
+                        prizes and certificates.
+                    </template>
+                </div>
+
+                <!-- 2. Mechanical Autopsy -->
+                <div class="bento-card bento-tall fade-in" style="--card-color: #a78bfa;">
+                    <div class="bento-icon"><i class="fas fa-tools"></i></div>
+                    <div class="bento-tag">EVENT</div>
+                    <h3 class="bento-title">MECHANICAL AUTOPSY</h3>
+                    <p class="bento-desc">Mechanical Autopsy is a two-round technical event that challenges participants
+                        to analyze and deconstruct a mechanical product to understand its components, materials, and
+                        manufacturing processes. Teams will reverse engineer the given object and propose an innovative
+                        improvement based on functionality, feasibility, and cost effectiveness.</p>
+                    <div class="bento-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> K Block Seminar hall</span>
+                        <span><i class="fas fa-user"></i> Sivani - +91 88257 52716</span>
+                        <span><i class="fas fa-user"></i> Koushik - +91 93847 86639</span>
+                    </div>
+                    <div class="bento-actions">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9LUcozK_3_tbmWur63ehGKuB2ngN_b1oKG_cEmaTfHTADYQ/viewform"
+                            target="_blank" class="bento-btn">Register <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <template id="autopsy-long">
+                        Mechanical Autopsy is an advanced reverse engineering challenge designed to evaluate
+                        participants’ technical expertise, analytical ability, and innovative thinking in the field of
+                        mechanical engineering. The event focuses on understanding how mechanical products are designed,
+                        manufactured, and optimized for real-world applications.<br><br>The competition is conducted in
+                        two structured rounds.<br><br>In Round 1, participants will undergo a technical screening
+                        process in the form of a quiz. The questions will primarily cover core mechanical engineering
+                        concepts, with emphasis on manufacturing processes, materials, machine elements, and fundamental
+                        design principles. This round aims to assess the participants’ theoretical knowledge,
+                        problem-solving skills, and aptitude. Based on performance, the top teams will be shortlisted
+                        for the next stage.<br><br>In Round 2, shortlisted teams will be provided with an existing
+                        mechanical product or instrument. Teams are required to systematically analyze and reverse
+                        engineer the product by identifying its individual components, materials used, manufacturing
+                        processes involved, machining operations, joints, and assembly methods. Participants must
+                        demonstrate a clear understanding of why specific design and manufacturing decisions were
+                        made.<br><br>Beyond analysis, each team must propose one innovative and practical modification
+                        to improve the product. The proposed enhancement should focus on improving functionality,
+                        efficiency, durability, usability, sustainability, or overall performance. Teams must also
+                        justify the technical feasibility, manufacturability, and cost effectiveness of their modified
+                        design.<br><br>The final evaluation will be based on depth of engineering analysis, clarity of
+                        explanation, innovation relevance, practicality of the proposed solution, and overall
+                        presentation quality.<br><br>Mechanical Autopsy aims to bridge the gap between theoretical
+                        knowledge and real-world product understanding, encouraging participants to think critically,
+                        engineer responsibly, and innovate effectively.
+                    </template>
+                </div>
+
+                <!-- 3. Locked In -->
+                <div class="bento-card bento-tall fade-in" style="--card-color: #f87171;">
+                    <div class="bento-icon"><i class="fas fa-lock"></i></div>
+                    <div class="bento-tag">EVENT</div>
+                    <h3 class="bento-title">LOCKED IN</h3>
+                    <p class="bento-desc">LOCKED IN is a multi-stage technical escape room challenge where teams of 2–3
+                        enter a completely dark room and solve three intense stages of puzzles. Participants must
+                        combine logic, teamwork, and technical thinking to unlock the final code and escape before time
+                        runs out.<br>Think fast. Stay calm. Escape the dark.</p>
+                    <div class="bento-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> G402</span>
+                        <span><i class="fas fa-user"></i> Shreesaran - +91 63695 53870</span>
+                        <span><i class="fas fa-user"></i> Sanjay - +91 63798 62065</span>
+                    </div>
+                    <div class="bento-actions">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYy3eOsjfxMrMB1Y0-x-fzYmbczUXJYLIfXbOyuo-Uet-qqw/viewform"
+                            target="_blank" class="bento-btn">Register <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <template id="lockedin-long">
+                        LOCKED IN is an immersive, multi-level technical escape room designed to test logic, teamwork,
+                        observation skills, and engineering intelligence under pressure.<br>Participants will enter a
+                        completely dark room in teams of 2–3 members and face three progressively challenging stages.
+                        Each stage unlocks one digit of the final escape code. Only by completing all three stages can
+                        teams unlock the final door and escape.<br>The challenges of each stage are withheld for
+                        surprise, but we guarantee that teams will leave the room either with the thrill of victory and
+                        the satisfaction of cracking every challenge under pressure, or with the humbling realization
+                        that even the simplest overlooked clue can trap you forever
+                    </template>
+                </div>
+
+                <!-- 4. Guesstimator -->
+                <div class="bento-card fade-in" style="--card-color: #f59e0b;">
+                    <div class="bento-icon"><i class="fas fa-brain"></i></div>
+                    <div class="bento-tag">EVENT</div>
+                    <h3 class="bento-title">GUESSTIMATOR</h3>
+                    <p class="bento-desc">Guesstimator is a thrilling battle of logic, estimation, and risk-taking. In
+                        teams of two, participants will answer time-bound questions by wagering tokens based on their
+                        confidence in the answer. Strategy, intuition, and smart decision-making will determine who
+                        survives and who gets eliminated. The team with the highest tokens at the end wins.</p>
+                    <div class="bento-meta">
+                        <span><i class="fas fa-user"></i> Sibi - +91 70101 76487</span>
+                        <span><i class="fas fa-user"></i> Bharani - +91 63694 55030</span>
+                    </div>
+                    <div class="bento-actions">
+                        <a href="https://forms.gle/guesstimator" target="_blank" class="bento-btn"
+                            style="padding: 12px 20px;">On-Spot Registration <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <template id="guesstimator-long">
+                        Guesstimator is a strategic and engaging event conducted in 3 slots over 2 days, with 2 rounds
+                        per slot. Teams of two will compete using smart estimation, confidence, and coin management
+                        skills.<br><br>Round 1 - Coin Wager Round<br>Each team starts with equal coins. For every
+                        question, four options will be displayed on plates. Teams must distribute their coins among the
+                        options based on their confidence.<br>Coins placed on the correct option will be retained, while
+                        coins on wrong options will be lost. The coins secured on correct answers will be carried
+                        forward to the next round. Teams proceed to Round 2 with only the coins earned through correct
+                        estimations.<br><br>Round 2 - Rapid Quiz Round<br>This round consists of 3 rapid questions. The
+                        winner will be decided based on:<br>Higher number of correct answers<br>Higher percentage of
+                        coins placed on the correct option<br>The team with the best overall performance and highest
+                        coin balance wins the slot.
+                    </template>
+                </div>
+
+                <!-- 5. Inflatopia -->
+                <div class="bento-card bento-large fade-in" style="--card-color: #34d399;">
+                    <div class="bento-icon"><i class="fas fa-cubes"></i></div>
+                    <div class="bento-tag">EVENT</div>
+                    <h3 class="bento-title">INFLATOPIA</h3>
+                    <p class="bento-desc">Put your creativity and teamwork to the test by building a balloon-powered car
+                        within a limited time. In teams of two , design a vehicle that travels the maximum distance
+                        using only air propulsion . Performance, stability, and aesthetics will determine the winners .
+                        Simple materials and smart ideas are the keys to success.</p>
+                    <div class="bento-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> G 301</span>
+                        <span><i class="fas fa-user"></i> Nikash - +91 86670 09400</span>
+                        <span><i class="fas fa-user"></i> Jabez - +91 8148 662304</span>
+                    </div>
+                    <div class="bento-actions">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYy3eOsjfxMrMB1Y0-x-fzYmbczUXJYLIfXbOyuo-Uet-qqw/viewform"
+                            target="_blank" class="bento-btn">Register <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <template id="inflatopia-long">
+                        This event combines creativity, teamwork, and smart engineering in an exciting hands-on
+                        challenge. Teams of 2 participants will design and build a balloon-powered car within a fixed
+                        time limit ⏳ using simple materials.<br>The objective is to make a car that travels the maximum
+                        distance using only air propulsion . Performance, stability, and aesthetic appeal will all play
+                        an important role in determining the winners . Smart design, proper alignment, weight balance,
+                        and efficient time management will be key to success.<br>But the challenge doesn’t end there.
+                        The same car will advance to ROUND 2, where an unlocked and unpredictable twist awaits —
+                        featuring a hurdle that will test adaptability and real-time problem solving ⚡. Only the most
+                        well-designed and thoughtfully built cars will rise to the occasion.<br>Build smart, plan
+                        wisely, and be ready for the unexpected.
+                    </template>
+                </div>
+
+                <!-- 6. Brand-X -->
+                <div class="bento-card bento-large fade-in" style="--card-color: #ec4899;">
+                    <div class="bento-icon"><i class="fas fa-bullhorn"></i></div>
+                    <div class="bento-tag">EVENT</div>
+                    <h3 class="bento-title">BRAND-X</h3>
+                    <p class="bento-desc">Time to put your creativity and marketing skills to the test! You will be
+                        assigned a product to market through a creative advertisement or role play. In the next round,
+                        teams will combine two different products to create an innovative solution and present a
+                        marketing pitch. Each team will consist of two members.</p>
+                    <div class="bento-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> F202</span>
+                        <span><i class="fas fa-user"></i> Koushik - +91 93847 86639</span>
+                        <span><i class="fas fa-user"></i> Pranesh - +91 93634 51300</span>
+                    </div>
+                    <div class="bento-actions">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc568ez9HMnkAc9rAHrEzvCJaLlcdCO_MvFJxeDLuIVqBVybw/viewform?fbzx=7331205346421776506"
+                            target="_blank" class="bento-btn">Register <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <template id="brandx-long">
+                        Get ready to showcase your creativity, marketing intelligence, and presentation skills in this
+                        exciting two-round challenge. This event encourages participants to think like marketers and
+                        innovators while presenting unique ideas in a fun and competitive environment. Each team will
+                        consist of two members.<br><br>Round 1: Product Pitch Challenge<br>The event begins with an
+                        engaging product selection activity. Teams will take part in a ring-toss game, where they throw
+                        rings onto bottles. The product on the bottle where the ring lands will be the team’s assigned
+                        product. Teams will then prepare and present a creative advertisement or role play to promote
+                        their product.<br>At the end of this round, the top-scoring teams will qualify for Round
+                        2.<br><br>Round 2: Innovation Fusion Challenge<br>Qualified teams will receive two random
+                        products through a lucky draw. The challenge is to combine these products and create a new
+                        innovative concept.<br>Teams are free to modify, redesign, or creatively reinterpret the
+                        products. They must present their idea as a market-ready product with a strong marketing
+                        pitch.<br><br>Participants should clearly explain:<br>&bull; The concept of the new
+                        product<br>&bull; Its purpose and functionality<br>&bull; The target audience
+                    </template>
+                </div>
+
+                <!-- 7. Linkin-Nova -->
+                <div class="bento-card fade-in" style="--card-color: #3b82f6;">
+                    <div class="bento-icon"><i class="fas fa-cogs"></i></div>
+                    <div class="bento-tag">EVENT</div>
+                    <h3 class="bento-title">LINKIN-NOVA</h3>
+                    <p class="bento-desc">Linkin-Nova is a technical event that tests participants' knowledge of
+                        mechanisms and observation skills. The event starts with a mechanism identification round and
+                        ends with an auction-based assembly round.</p>
+                    <div class="bento-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Y201</span>
+                        <span><i class="fas fa-user"></i> Guhan - +91 63833 50536</span>
+                        <span><i class="fas fa-user"></i> Karthi - +91 90250 28464</span>
+                        <span><i class="fas fa-user"></i> Sanjay - +91 63798 62065</span>
+                    </div>
+                    <div class="bento-actions">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc568ez9HMnkAc9rAHrEzvCJaLlcdCO_MvFJxeDLuIVqBVybw/viewform?fbzx=7331205346421776506"
+                            target="_blank" class="bento-btn">Register <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <template id="linkinnova-long">
+                        Linkin-Nova is an interactive and skill-oriented technical event designed to test participants’
+                        understanding of mechanical mechanisms, observation skills, teamwork, and strategic
+                        decision-making. The event is conducted in two stages, each focusing on a different aspect of
+                        mechanical engineering aptitude. From the beginning of the event, participants take part as
+                        teams of two.<br><br>Round 1- Mechanism Identification<br>Each team is exposed to a sequence of
+                        images of mechanical mechanisms along with their names, each displayed for an interval of 15
+                        seconds. After the visual presentation, a set of application-based questions is displayed, where
+                        teams must identify the most appropriate mechanism corresponding to each question from those
+                        shown earlier. This round evaluates participants’ visual memory, conceptual clarity, teamwork,
+                        and their ability to relate mechanisms to real-world applications. Based on their performance,
+                        the top teams are shortlisted for the final round.<br><br>Round 2 - Auction and
+                        Assemble<br>Shortlisted teams take part in an exciting auction-based assembly challenge. Each
+                        team is given a fixed virtual budget and must strategically bid on mechanical components from
+                        the Makit Master Kit. Once the auction concludes, teams are required to assemble a final product
+                        using only the components they have acquired within a limited time.<br><br>Teams are evaluated
+                        on the accuracy, completeness, functionality of the assembly, efficient use of components, time
+                        management, and overall strategy. The team that demonstrates the best balance of technical
+                        knowledge, smart bidding, and precise assembly is declared the winner of Linkin-Nova.
+                    </template>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Workshops Section -->
+    <section class="section" id="workshops">
+        <div class="container">
+            <p class="section-eyebrow fade-in">LEARN & GROW</p>
+            <h2 class="section-title fade-in">WORKSHOPS <span class="text-accent">2026</span></h2>
+            <div class="bento-grid" style="grid-template-columns: repeat(2, 1fr);">
+
+                <!-- 1. NDTE Workshop -->
+                <div class="bento-card fade-in" style="--card-color: #60a5fa;">
+                    <div class="bento-icon"><i class="fas fa-tools"></i></div>
+                    <div class="bento-tag">Workshop</div>
+                    <h3 class="bento-title">WORKSHOP ON INDUSTRIAL ENGINEERING TOOLS</h3>
+                    <p class="bento-desc"><strong>From AutoCAD to Optimization: Practical IE Tools</strong><br>Design
+                        smarter. Measure better. Optimize faster.<br><br>Master the core tools of industrial engineering
+                        — AutoCAD layouts, MODAPTS, operator optimization, cycle time analysis, and Excel-driven
+                        productivity.<br><br>⚡ Industry-relevant skills.<br>⚡ Practical learning.<br>⚡ Real impact.</p>
+                    <div class="bento-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> EDC Lab</span>
+                        <span><i class="fas fa-user"></i> Venkatesh - +91 95669 27770</span>
+                        <span><i class="fas fa-user"></i> Karthi - +91 90250 28464</span>
+                    </div>
+                    <div class="bento-actions">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdYy3eOsjfxMrMB1Y0-x-fzYmbczUXJYLIfXbOyuo-Uet-qqw/viewform"
+                            target="_blank" class="bento-btn">Register <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <template id="ndte-long">
+                        Engineering today is not just about designing — it’s about delivering measurable efficiency.
+                        This workshop brings together the most powerful practical tools used by industrial engineers in
+                        manufacturing and operations.<br><br>You will learn how to:<br><br>&bull; Build efficient
+                        facility layouts using AutoCAD<br>&bull; Apply MODAPTS for scientific work measurement and
+                        ergonomics<br>&bull; Improve productivity through operator and workflow optimization<br>&bull;
+                        Analyze and reduce cycle time for higher efficiency<br>&bull; Leverage Excel for data-driven
+                        industrial decision-making<br><br>This session focuses on real-world application, helping you
+                        think like an industrial engineer and solve shopfloor challenges with confidence.<br><br>🎯
+                        Ideal for students aiming for careers in manufacturing, operations, quality, and core
+                        engineering roles
+                    </template>
+                </div>
+
+                <!-- 2. Mechanical Integrity Workshop -->
+                <div class="bento-card fade-in" style="--card-color: #8b5cf6;">
+                    <div class="bento-icon"><i class="fas fa-cogs"></i></div>
+                    <div class="bento-tag">Workshop</div>
+                    <h3 class="bento-title">WORKSHOP ON MECHANICAL INTEGRITY</h3>
+                    <p class="bento-desc">This workshop introduces the fundamentals of mechanical integrity and its role
+                        in ensuring the safety and reliability of mechanical systems. Participants will gain basic
+                        insights into equipment maintenance, failure prevention, and industry practices used to keep
+                        mechanical systems operating safely and efficiently.</p>
+                    <div class="bento-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> K block Seminar Hall</span>
+                        <span><i class="fas fa-user"></i> Sivani - +91 88257 52716</span>
+                        <span><i class="fas fa-user"></i> Marimuthu - +91 74181 78500</span>
+                    </div>
+                    <div class="bento-actions">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc568ez9HMnkAc9rAHrEzvCJaLlcdCO_MvFJxeDLuIVqBVybw/viewform?fbzx=7331205346421776506"
+                            target="_blank" class="bento-btn">Register <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <template id="mechanicalintegrity-long">
+                        As part of Prayatna, the flagship event of the Association of Mechanical Engineering, this
+                        workshop focuses on the concept of Mechanical Integrity, which plays a crucial role in
+                        maintaining the safety and reliability of mechanical systems in industries.<br><br>Mechanical
+                        Integrity involves ensuring that equipment such as pressure vessels, piping systems, rotating
+                        machinery, and other mechanical components operate safely and efficiently throughout their
+                        lifecycle. In many industries including manufacturing, oil and gas, power plants, and chemical
+                        processing, maintaining the integrity of equipment is essential to prevent failures, accidents,
+                        and costly downtime.<br><br>This workshop will introduce participants to the basic principles of
+                        mechanical integrity, common types of equipment failures, inspection methods, and preventive
+                        maintenance practices. Participants will also learn how engineers monitor equipment health and
+                        ensure safe operation through regular inspections, proper maintenance strategies, and
+                        reliability practices.<br><br>The session is designed to provide students with practical
+                        knowledge and industry-oriented insights in a simple and understandable manner. By attending
+                        this workshop, participants will gain a clearer understanding of how mechanical engineers play a
+                        key role in maintaining the safety, efficiency, and reliability of industrial systems.
+                    </template>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <p class="section-eyebrow fade-in">GET IN TOUCH</p>
+            <h2 class="section-title fade-in">CONTACT <span class="text-accent">US</span></h2>
+            <div class="contact-grid">
+                <div class="contact-card fade-in">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <strong>Department of Mechanical Engineering</strong><br>
+                            PSG College of Technology,<br>
+                            Coimbatore, Tamil Nadu, India
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <strong>Coordinators:</strong><br>
+                            Ibrahim - +91 99400 13677<br>
+                            Prithvi - +91 63825 75930<br>
+                            Akshai - +91 79044 57034
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://www.instagram.com/ame_psgtech?igsh=Z3NxZnhiZGh4YXlj" target="_blank"
+                            class="contact-social-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/ame-psg-tech/" target="_blank"
+                            class="contact-social-btn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="map-card fade-in">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.1623707167244!2d77.00282007484607!3d11.023702289145376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba857e3e2a3e4e1%3A0x4c5a6d12d4c9b16b!2sPSG%20College%20of%20Technology!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" title="PSG College of Technology Location">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-glow-line"></div>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h2 class="footer-logo">PRAYATNA <span class="logo-accent">'26</span></h2>
+                    <p class="footer-tagline">LEARN &bull; IMPACT &bull; INNOVATE</p>
+                    <p class="footer-dept">Dept. of Mechanical Engineering, PSGCT</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#schedule">Schedule</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Organized By</h4>
+                    <ul>
+                        <li>AME — Association of Mechanical Engineering</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Prayatna. All Rights Reserved.</p>
+                <p>PSG College of Technology, Coimbatore</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Detail Modal (Refined Event Tab) -->
+    <div class="modal-overlay" id="detailModal">
+        <div class="modal-content event-tab-content">
+            <div class="modal-close" id="closeDetailModal">&times;</div>
+
+            <div class="event-tab-layout">
+                <!-- Top: Video Header (Autoplay) -->
+                <div class="event-tab-header">
+                    <video id="detailVideo" autoplay muted playsinline controls class="event-tab-video-player">
+                        <source src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- Middle: Desc -->
+                <div class="event-tab-mid">
+                    <div class="event-tab-desc">
+                        <h2 class="modal-title" id="detailTitle">EVENT TITLE</h2>
+                        <div class="modal-body" id="detailBody">
+                            <!-- Content injected via JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom: Register Button -->
+                <div class="event-tab-bottom">
+                    <a href="#" id="detailRegisterBtn" class="btn-register-green">
+                        <i class="fas fa-bolt"></i> REGISTER NOW
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal (Existing) -->
+    <div class="modal-overlay" id="registerModal">
+        <div class="modal-content">
+            <div class="modal-close" id="closeModal">&times;</div>
+            <div class="modal-glow-ring"></div>
+            <div class="modal-pill"><i class="far fa-calendar-alt"></i> March 27th &amp; 28th, 2026</div>
+            <h2 class="modal-title">PRAYATNA <span class="logo-accent">'26</span></h2>
+            <p class="modal-sub">Secure your spot for competitions and workshops.</p>
+            <div class="countdown" id="countdown">
+                <div class="countdown-unit">
+                    <span class="countdown-num" id="days">00</span>
+                    <span class="countdown-label">DAYS</span>
+                </div>
+                <div class="countdown-sep">:</div>
+                <div class="countdown-unit">
+                    <span class="countdown-num" id="hours">00</span>
+                    <span class="countdown-label">HRS</span>
+                </div>
+                <div class="countdown-sep">:</div>
+                <div class="countdown-unit">
+                    <span class="countdown-num" id="minutes">00</span>
+                    <span class="countdown-label">MIN</span>
+                </div>
+                <div class="countdown-sep">:</div>
+                <div class="countdown-unit">
+                    <span class="countdown-num" id="seconds">00</span>
+                    <span class="countdown-label">SEC</span>
+                </div>
+            </div>
+            <a href="https://forms.gle/5TU1a3JvXQkt9T6z9" target="_blank" class="btn btn-primary modal-btn">Register Now
+                <i class="fas fa-arrow-right"></i></a>
+            <button class="modal-dismiss" id="dismissModal">Maybe Later</button>
+        </div>
+    </div>
+
+    <script src="script.js?v=4"></script>
+</body>
+
+</html>
